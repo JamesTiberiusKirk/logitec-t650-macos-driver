@@ -1,0 +1,5 @@
+== DEVICE_FW_VERSION 0x0003: 4 entities (echo-matched) ==
+  [0] Main firmware    RQM v41.00 build 0033   raw=00 52 51 4d 41 00 00 33 00 41 01 00 00 00 00 00
+  [1] Bootloader       BL  v03.00 build 0000   raw=01 42 4c 20 03 00 00 00 00 41 01 00 00 00 00 00
+  [2] Hardware         HW  v05.00 build 0000   raw=02 48 57 20 05 00 00 00 00 41 01 00 00 00 00 00
+  [3] Touchpad sensor  SYN v05.00 build 0000   raw=03 53 59 4e 05 00 00 00 00 41 01 00 00 00 00 00

@@ -1,0 +1,34 @@
+== FEATURE_SET (0x0001) enumeration ==
+feature count (excl. root) = 22
+
+ idx   featID  flags  name
+   0 0x0000   0x00  ROOT
+   1 0x0001   0x00  FEATURE_SET
+   2 0x0002   0x00  ?
+   3 0x0003   0x00  DEVICE_FW_VERSION
+   4 0x0005   0x00  DEVICE_NAME
+   5 0x1000   0x00  BATTERY_STATUS
+   6 0x1d4b   0x00  WIRELESS_DEVICE_STATUS
+   7 0x1df3   0x60  EQUAD_DJ_DEVICE_ENABLE  [hidden,engineering]
+   8 0x1b00   0x00  REPROG_CONTROLS
+   9 0x1f03   0x60  UNIFIED_BATTERY  [hidden,engineering]
+  10 0x2100   0x00  ?
+  11 0x2120   0x00  HI_RES_SCROLLING
+  12 0x2200   0x00  ?
+  13 0x00c0   0x00  ?
+  14 0x1e80   0x60  ?  [hidden,engineering]
+  15 0x6100   0x00  TOUCHPAD_RAW_XY
+  16 0x1860   0x60  ?  [hidden,engineering]
+  17 0x1e00   0x40  ENABLE_HIDDEN_FEATURES  [hidden]
+  18 0x1b01   0x00  ?
+  19 0x1890   0x60  ?  [hidden,engineering]
+  20 0x18e5   0x60  ?  [hidden,engineering]
+  21 0x18a0   0x60  ?  [hidden,engineering]
+  22 0x1830   0x60  ?  [hidden,engineering]
+
+== DEVICE_FW_VERSION (0x0003) ==
+getDeviceInfo: entities=4  raw=04 00 00 00 00 00 00
+  [0] Main (firmware)  RQM65.000  raw=00 52 51 4d 41 00 00
+  [1] Bootloader       BL 03.000  raw=01 42 4c 20 03 00 00
+  [2] Hardware         HW 05.000  raw=02 48 57 20 05 00 00
+  [3] Touchpad         SYN05.000  raw=03 53 59 4e 05 00 00

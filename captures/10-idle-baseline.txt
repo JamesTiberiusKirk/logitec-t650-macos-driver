@@ -1,0 +1,2 @@
+# T650 raw capture: /dev/hidraw4 (receiver 046d:c52b), device index 1
+# cols: t_ms dt_ms  raw_hex  | decoded

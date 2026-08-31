@@ -1,0 +1,8 @@
+== setRawReportState (0x6100 fn2) — idempotent re-send of the value already in effect ==
+  before: getRawReportState -> 0x05
+  request on the wire (20 bytes): 11 01 0f 2e 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  reply payload: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  after:  getRawReportState -> 0x05   (unchanged: True)
+
+  NOTE: low nibble of byte 3 is the caller-chosen software id.
+        kernel uses 0x01 -> byte3 = 0x21;  this tool uses 0x0e -> byte3 = 0x2e

@@ -1,0 +1,4 @@
+ROOT fn1 getProtocolVersion -> 2.0   raw=02 00 00 00
+BATTERY_STATUS 0x1000 fn0 -> level=50% next=20% status=0x00  raw=32 14 00 00
+0x6100 fn0 raw = 0b 10 09 3c 08 08 08 0a 01 00 00 00 00 02 58 00
+   params[13:15]=0x0258=600 -> kernel res = v*2/51 = 23 units/mm

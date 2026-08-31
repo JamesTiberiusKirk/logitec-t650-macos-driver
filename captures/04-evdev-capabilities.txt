@@ -1,0 +1,25 @@
+name    : Logitech Rechargeable Touchpad T650
+phys    : usb-0000:00:14.0-4/input2:1
+uniq    : c8-50-c6-db
+bustype : 0x0003  vendor: 0x046d  product: 0x4101  version: 0x0111
+props   : None
+input_props: ['INPUT_PROP_POINTER', 'INPUT_PROP_BUTTONPAD']
+
+== KEY / BTN ==
+   272  ('BTN_LEFT', 'BTN_MOUSE')
+   325  BTN_TOOL_FINGER
+   328  BTN_TOOL_QUINTTAP
+   330  BTN_TOUCH
+   333  BTN_TOOL_DOUBLETAP
+   334  BTN_TOOL_TRIPLETAP
+   335  BTN_TOOL_QUADTAP
+
+== ABS axes ==
+  ABS_X                    min=0      max=2832   fuzz=0    flat=0    res=23
+  ABS_Y                    min=0      max=2364   fuzz=0    flat=0    res=23
+  ABS_PRESSURE             min=0      max=50     fuzz=0    flat=0    res=0
+  ABS_MT_SLOT              min=0      max=9      fuzz=0    flat=0    res=0
+  ABS_MT_POSITION_X        min=0      max=2832   fuzz=0    flat=0    res=23
+  ABS_MT_POSITION_Y        min=0      max=2364   fuzz=0    flat=0    res=23
+  ABS_MT_TRACKING_ID       min=0      max=65535  fuzz=0    flat=0    res=0
+  ABS_MT_PRESSURE          min=0      max=50     fuzz=0    flat=0    res=0

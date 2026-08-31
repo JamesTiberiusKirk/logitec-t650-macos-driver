@@ -1,0 +1,32 @@
+== reports-per-frame, broken out by finger_count (whole session) ==
+ finger_count  reports/frame   frames
+            0              1       18
+            1              1     1051
+            2              1      691
+            3              2      232
+            4              2       92
+            5              3       78
+
+== isolated 3-contact frames ==
+count: 232
+  frame:
+    eof=0 n=3 ts=8196 [fid=1 st=1 x=1597 y=1547 a=12] [fid=2 st=1 x=2368 y=1776 a=20]
+    eof=1 n=3 ts=8196 [fid=3 st=1 x=1889 y=1788 a=20] [empty]
+  frame:
+    eof=0 n=3 ts=8207 [fid=1 st=1 x=1597 y=1547 a=12] [fid=2 st=1 x=2368 y=1776 a=20]
+    eof=1 n=3 ts=8207 [fid=3 st=1 x=1888 y=1788 a=20] [empty]
+  frame:
+    eof=0 n=3 ts=8228 [fid=1 st=1 x=1597 y=1547 a=12] [fid=2 st=1 x=2368 y=1776 a=20]
+    eof=1 n=3 ts=8228 [fid=3 st=1 x=1888 y=1788 a=20] [empty]
+
+== finger_id sets actually present per frame (sparseness check) ==
+  ids=()                   frames=18    contiguous=True
+  ids=(1,)                 frames=1025  contiguous=True
+  ids=(2,)                 frames=26    contiguous=False
+  ids=(1, 2)               frames=614   contiguous=True
+  ids=(1, 3)               frames=76    contiguous=False
+  ids=(2, 3)               frames=1     contiguous=False
+  ids=(1, 2, 3)            frames=232   contiguous=True
+  ids=(1, 2, 3, 4)         frames=91    contiguous=True
+  ids=(1, 2, 3, 5)         frames=1     contiguous=False
+  ids=(1, 2, 3, 4, 5)      frames=78    contiguous=True

@@ -1,0 +1,35 @@
+== DEVICE_FW_VERSION 0x0003 fn1, full 16-byte payloads ==
+  entity[0] raw = 00 52 51 4d 41 00 00 33 00 41 01 00 00 00 00 00
+            type=0x00 prefix='RQM' ver=41.00 build=0x0033 (51)
+  entity[1] raw = 00 52 51 4d 41 00 00 33 00 41 01 00 00 00 00 00
+            type=0x00 prefix='RQM' ver=41.00 build=0x0033 (51)
+  entity[2] raw = 01 42 4c 20 03 00 00 00 00 41 01 00 00 00 00 00
+            type=0x01 prefix='BL ' ver=03.00 build=0x0000 (0)
+  entity[3] raw = 02 48 57 20 05 00 00 00 00 41 01 00 00 00 00 00
+            type=0x02 prefix='HW ' ver=05.00 build=0x0000 (0)
+
+== DEVICE_NAME 0x0005 ==
+  name: Rechargeable Touchpad T650
+
+== TOUCHPAD_RAW_XY 0x6100, feature index 15 ==
+  fn0 getTouchpadInfo raw = 0b 10 09 3c 08 08 08 0a 01 00 00 00 00 02 58 00
+    x_size          = 2832
+    y_size          = 2364
+    z_range         = 8
+    area_range      = 8
+    timestamp_unit  = 8
+    max_contacts    = 10
+    origin          = 1  (1 = upper-left)
+    pen_support     = 0
+
+  fn1 getRawReportState raw = 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+    byte0 = 0x05  send_raw_reports=1  force_vs_area=0  sensor_enhanced_settings=1
+
+--- CORRECTION (appended after review) ---
+The line above printing "origin = 1  (1 = upper-left)" is WRONG. The annotation
+in the script was incorrect; the captured byte is right.
+Per hid-logitech-hidpp.c:
+    TOUCHPAD_RAW_XY_ORIGIN_LOWER_LEFT  0x01
+    TOUCHPAD_RAW_XY_ORIGIN_UPPER_LEFT  0x03
+origin == 1 therefore means LOWER_LEFT, so the kernel sets flip_y and reports
+y_out = y_size - y_raw. See T650_PROTOCOL_SPEC.md section 3.4 / 5.8.
